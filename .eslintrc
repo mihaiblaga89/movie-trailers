@@ -17,6 +17,12 @@
         "react/jsx-filename-extension": [1, { "extensions": [".js"] }],
         "react/require-default-props": "off",
         "react/forbid-prop-types": "off",
+        "no-unused-expressions": [
+            "error",
+            {
+                "allowShortCircuit": true
+            }
+        ],
         "prettier/prettier": [
             "error",
             {
