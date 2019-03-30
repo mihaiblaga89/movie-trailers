@@ -10,8 +10,8 @@ const Home = () => {
             <Header as="h1">Movie Trailers</Header>
             <Carousel title="Popular movies" getDataFunction={API.getMostPopularMovies} />
             <Carousel title="Popular series" getDataFunction={API.getMostPopularSeries} />
-            <Carousel title="Family" getDataFunction={API.getMostPopularMovies} />
-            <Carousel title="Documentary" getDataFunction={API.getMostPopularMovies} />
+            <Carousel title="Family" getDataFunction={API.getFamilyGenre} />
+            <Carousel title="Documentary" getDataFunction={API.getDocumentaryGenre} />
         </Fragment>
     );
 };

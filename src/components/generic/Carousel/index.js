@@ -5,7 +5,7 @@ import { Container, Card, Image, Placeholder, Header } from 'semantic-ui-react';
 import { navigate } from '@reach/router';
 import '@brainhubeu/react-carousel/lib/style.css';
 
-import { generatePosterPath } from '../../../utils';
+import { generateSmallPosterURL } from '../../../utils';
 import './carousel.scss';
 
 class Carousel extends Component {
@@ -29,7 +29,7 @@ class Carousel extends Component {
                         };
                         return (
                             <Card onClick={goTo} key={result.id}>
-                                <Image src={generatePosterPath(result.poster_path)} />
+                                <Image src={generateSmallPosterURL(result.poster_path)} />
                             </Card>
                         );
                     })}
@@ -45,7 +45,6 @@ class Carousel extends Component {
 
     render() {
         const { title } = this.props;
-        console.log(this.state);
         return (
             <Container style={{ marginTop: '20px' }}>
                 <Header as="h2">{title}</Header>

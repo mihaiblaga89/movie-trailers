@@ -1,3 +1,7 @@
 ul.BrainhubCarousel__track {
-    overflow: visible;
+    overflow: visible !important;
+}
+
+div.BrainhubCarousel__trackContainer {
+    padding-top: 5px;
 }

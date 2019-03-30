@@ -3,12 +3,12 @@ import { Container } from 'semantic-ui-react';
 import { Router } from '@reach/router';
 
 import Home from './pages/Home';
+import Detail from './pages/Detail';
 
-const Detail = () => <div>Dash</div>;
 const NotFound = () => <div>404</div>;
 
 const App = () => (
-    <Container>
+    <Container style={{ marginTop: '50px' }}>
         <Router>
             <Home path="/" />
             <Detail path="movies/:movieId" />
