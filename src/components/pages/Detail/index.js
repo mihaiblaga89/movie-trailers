@@ -1,13 +1,14 @@
 /* eslint-disable camelcase */
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { Container, Grid, Header, Button, Image, Divider } from 'semantic-ui-react';
+import { Container, Grid, Header, Button, Image, Divider, Modal } from 'semantic-ui-react';
 import swal from 'sweetalert';
 
 import API from '../../../services/api';
 import { generateBigPosterURL } from '../../../utils';
 import DetailsList from '../../generic/DetailsList';
 import DetailsPlaceholder from '../../generic/DetailsPlaceholder';
+import VideoModal from '../../generic/VideoModal';
 
 /* global window */
 
@@ -54,7 +55,14 @@ class Details extends Component {
                         <Header as="h3" />
                         <DetailsList data={data} isMovie={isMovie} />
                         <Divider />
-                        <Button primary>Play video</Button>
+                        <Modal
+                            className="video-modal-container"
+                            trigger={<Button primary>Play video</Button>}
+                            basic
+                            size="fullscreen"
+                        >
+                            <VideoModal />
+                        </Modal>
                     </Grid.Column>
                     <Grid.Column>
                         <Image src={generateBigPosterURL(poster_path)} />
