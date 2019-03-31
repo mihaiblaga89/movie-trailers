@@ -28,5 +28,5 @@ Pressing `w` will show the help.
 
 ### Known issues
 
-1. On some versions yarn complains about `"react-scripts > pnp-webpack-plugin > ts-pnp@1.0.1" has unmet peer dependency "typescript@*"`. This is a known issue in create-react-app [Link1](https://github.com/facebook/create-react-app/issues/6691) [Link2](https://github.com/arcanis/pnp-webpack-plugin/issues/7) That's the reason for adding the yarn requirement in package.json.
+1. On some versions yarn complains about `"react-scripts > pnp-webpack-plugin > ts-pnp@1.0.1" has unmet peer dependency "typescript@*"`. This is a known issue in create-react-app ([Link1](https://github.com/facebook/create-react-app/issues/6691), [Link2](https://github.com/arcanis/pnp-webpack-plugin/issues/7)) That's the reason for adding the yarn requirement in package.json.
 2. The server serving the video is not CORS-friendly. The browser tries to do some preflight request with the `OPTIONS` method but it's not implemented server-side. The video still plays but the console turns red.
