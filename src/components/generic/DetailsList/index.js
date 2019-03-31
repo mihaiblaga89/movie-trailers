@@ -27,6 +27,7 @@ const DetailsList = ({ data, isMovie }) => {
         number_of_episodes,
     } = data;
 
+    // generate an episode string like S01E08 based on the episode object
     const composeEpisodeInfo = episode => {
         const { air_date, episode_number, name, season_number } = episode;
         const pad = toPad => toPad.toString().padStart(2, '0');
