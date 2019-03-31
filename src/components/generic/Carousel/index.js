@@ -4,6 +4,7 @@ import CarouselComponent from '@brainhubeu/react-carousel';
 import { Container, Card, Image, Placeholder, Header } from 'semantic-ui-react';
 import { navigate } from '@reach/router';
 import swal from 'sweetalert';
+import { isMobile } from 'react-device-detect';
 import '@brainhubeu/react-carousel/lib/style.css';
 
 import { generateSmallPosterURL } from '../../../utils';
@@ -28,7 +29,7 @@ class Carousel extends Component {
 
         if (data && Array.isArray(data.results)) {
             return (
-                <CarouselComponent slidesPerPage={8} infinite arrows>
+                <CarouselComponent slidesPerPage={isMobile ? 3 : 8} infinite arrows>
                     {data.results.map(result => {
                         const goTo = () => {
                             // movies have title, series have name, decide where to go based on that
