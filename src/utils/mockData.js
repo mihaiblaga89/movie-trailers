@@ -1,0 +1,21 @@
+export default {
+    detailsList: {
+        genres: [],
+        production_companies: [],
+        budget: 25,
+        production_countries: [],
+        release_date: '',
+        runtime: 32,
+        status: '',
+        vote_average: 5,
+        vote_count: 232,
+        first_air_date: '',
+        created_by: [],
+        episode_run_time: [],
+        networks: [],
+        seasons: [],
+        last_episode_to_air: null,
+        next_episode_to_air: null,
+        number_of_episodes: 24,
+    },
+};

@@ -5,7 +5,7 @@ import { Router } from '@reach/router';
 import Home from './pages/Home';
 import Detail from './pages/Detail';
 
-const NotFound = () => <div>404</div>;
+const NotFound = () => <div>Page not found</div>;
 
 const App = () => (
     <Container style={{ marginTop: '50px' }}>

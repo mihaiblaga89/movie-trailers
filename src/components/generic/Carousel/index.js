@@ -11,17 +11,28 @@ import { generateSmallPosterURL } from '../../../utils';
 import './carousel.scss';
 
 class Carousel extends Component {
-    state = { data: null };
+    constructor() {
+        super();
+
+        this.state = { data: null };
+        // prevent setting the state if the component unmounted
+        this.mounted = false;
+    }
 
     componentDidMount() {
+        this.mounted = true;
         const { getDataFunction } = this.props;
         getDataFunction &&
             getDataFunction()
-                .then(({ data }) => this.setState({ data }))
+                .then(({ data }) => this.mounted && this.setState({ data }))
                 .catch(() => {
-                    this.setState({ data: null });
+                    if (this.mounted) this.setState({ data: null });
                     swal('Oops', 'We encountered an error while getting data from TMDB', 'error');
                 });
+    }
+
+    componentWillUnmount() {
+        this.mounted = false;
     }
 
     renderCarousel = () => {

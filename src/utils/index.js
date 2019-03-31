@@ -20,20 +20,20 @@ const generateSmallPosterURL = path => {
  */
 const generateBigPosterURL = path => {
     const baseURL = config.imageBaseURL;
-    const imageSize = 'w500'; // best option for image uniformity
+    const imageSize = 'w500';
     return `${baseURL}${imageSize}/${path}`;
 };
 
 /**
- * Generates the image URL for logos
+ * Generates the image URL for the search results
  *
  * @param {String} path
  * @returns {String}
  */
-const generateLogoURL = path => {
+const generateThumbnailPosterURL = path => {
     const baseURL = config.imageBaseURL;
-    const imageSize = 'w45'; // best option for image uniformity
+    const imageSize = 'w92';
     return `${baseURL}${imageSize}/${path}`;
 };
 
-export { generateSmallPosterURL, generateBigPosterURL, generateLogoURL };
+export { generateSmallPosterURL, generateBigPosterURL, generateThumbnailPosterURL };

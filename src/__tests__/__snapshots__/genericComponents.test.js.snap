@@ -1,0 +1,350 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Carousel renders without crashing and matches snapshot 1`] = `
+<div
+  className="ui container"
+  style={
+    Object {
+      "marginTop": "20px",
+    }
+  }
+>
+  <h2
+    className="ui header"
+  >
+    test
+  </h2>
+  <div
+    className="ui fluid placeholder"
+    style={
+      Object {
+        "height": "200px",
+      }
+    }
+  >
+    <div
+      className="rectangular image"
+    />
+  </div>
+</div>
+`;
+
+exports[`DetailsLabel renders without crashing and matches snapshot 1`] = `
+<div
+  className="item"
+  onClick={[Function]}
+  role="listitem"
+>
+  <div
+    className="header"
+  >
+    test
+  </div>
+  Label
+</div>
+`;
+
+exports[`DetailsList renders without crashing and matches snapshot 1`] = `
+<div
+  className="ui list"
+  role="list"
+>
+  <div
+    className="ui heart disabled rating"
+    onMouseLeave={[Function]}
+    role="radiogroup"
+    style={
+      Object {
+        "marginBottom": "25px",
+      }
+    }
+    tabIndex={0}
+  >
+    <i
+      aria-checked={false}
+      aria-posinset={1}
+      aria-setsize={5}
+      className="active icon"
+      onClick={[Function]}
+      onKeyUp={[Function]}
+      onMouseEnter={[Function]}
+      role="radio"
+      tabIndex={-1}
+    />
+    <i
+      aria-checked={false}
+      aria-posinset={2}
+      aria-setsize={5}
+      className="active icon"
+      onClick={[Function]}
+      onKeyUp={[Function]}
+      onMouseEnter={[Function]}
+      role="radio"
+      tabIndex={-1}
+    />
+    <i
+      aria-checked={false}
+      aria-posinset={3}
+      aria-setsize={5}
+      className="icon"
+      onClick={[Function]}
+      onKeyUp={[Function]}
+      onMouseEnter={[Function]}
+      role="radio"
+      tabIndex={-1}
+    />
+    <i
+      aria-checked={false}
+      aria-posinset={4}
+      aria-setsize={5}
+      className="icon"
+      onClick={[Function]}
+      onKeyUp={[Function]}
+      onMouseEnter={[Function]}
+      role="radio"
+      tabIndex={-1}
+    />
+    <i
+      aria-checked={false}
+      aria-posinset={5}
+      aria-setsize={5}
+      className="icon"
+      onClick={[Function]}
+      onKeyUp={[Function]}
+      onMouseEnter={[Function]}
+      role="radio"
+      tabIndex={-1}
+    />
+  </div>
+  <span>
+    (232 votes)
+  </span>
+  
+  <div
+    className="item"
+    onClick={[Function]}
+    role="listitem"
+  >
+    <div
+      className="header"
+    >
+      Genres
+    </div>
+    
+  </div>
+  <div
+    className="item"
+    onClick={[Function]}
+    role="listitem"
+  >
+    <div
+      className="header"
+    >
+      Production companies
+    </div>
+    
+  </div>
+  <div
+    className="item"
+    onClick={[Function]}
+    role="listitem"
+  >
+    <div
+      className="header"
+    >
+      Budget
+    </div>
+    $25
+  </div>
+  <div
+    className="item"
+    onClick={[Function]}
+    role="listitem"
+  >
+    <div
+      className="header"
+    >
+      Production countries
+    </div>
+    
+  </div>
+  
+  <div
+    className="item"
+    onClick={[Function]}
+    role="listitem"
+  >
+    <div
+      className="header"
+    >
+      Runtime
+    </div>
+    32 minutes
+  </div>
+</div>
+`;
+
+exports[`DetailsPlaceholder renders without crashing and matches snapshot 1`] = `
+<div
+  className="ui stackable grid"
+>
+  <div
+    className="two column row"
+  >
+    <div
+      className="column"
+    >
+      <div
+        className="ui fluid placeholder"
+      >
+        <div
+          className="header"
+        >
+          <div
+            className="line"
+          />
+        </div>
+        <div
+          className="paragraph"
+        >
+          <div
+            className="line"
+          />
+          <div
+            className="line"
+          />
+          <div
+            className="line"
+          />
+          <div
+            className="line"
+          />
+        </div>
+        <div
+          className="paragraph"
+        >
+          <div
+            className="line"
+          />
+          <div
+            className="line"
+          />
+          <div
+            className="line"
+          />
+          <div
+            className="line"
+          />
+          <div
+            className="line"
+          />
+        </div>
+        <div
+          className="paragraph"
+        >
+          <div
+            className="line"
+          />
+          <div
+            className="line"
+          />
+          <div
+            className="line"
+          />
+          <div
+            className="line"
+          />
+          <div
+            className="line"
+          />
+        </div>
+        <div
+          className="paragraph"
+        >
+          <div
+            className="line"
+          />
+          <div
+            className="line"
+          />
+          <div
+            className="line"
+          />
+          <div
+            className="line"
+          />
+          <div
+            className="line"
+          />
+        </div>
+      </div>
+    </div>
+    <div
+      className="column"
+    >
+      <div
+        className="ui fluid placeholder"
+      >
+        <div
+          className="rectangular image"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`SearchField renders without crashing and matches snapshot 1`] = `
+<div
+  className="ui fluid search search-field"
+  onBlur={[Function]}
+  onFocus={[Function]}
+  onMouseDown={[Function]}
+>
+  <div
+    className="ui icon input"
+  >
+    <input
+      autoComplete="off"
+      className="prompt"
+      onChange={[Function]}
+      onClick={[Function]}
+      tabIndex="0"
+      type="text"
+      value=""
+    />
+    <i
+      aria-hidden="true"
+      className="search icon"
+      onClick={[Function]}
+    />
+  </div>
+  <div
+    className="results transition"
+  >
+    <div
+      className="message empty"
+    >
+      <div
+        className="header"
+      >
+        No results found.
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`VideoModal renders without crashing and matches snapshot 1`] = `
+<div
+  className="video-modal-content content"
+>
+  <video
+    autoPlay={true}
+    controls={true}
+    id="video"
+    poster="http://www.millson.net/wp-content/uploads/2013/09/IMAX_Slide3.jpg"
+    width="100%"
+  />
+</div>
+`;
