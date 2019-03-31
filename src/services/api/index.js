@@ -107,6 +107,17 @@ class API {
     getSeries = id => {
         return this.makeRequest('GET', `tv/${id}`);
     };
+
+    /**
+     * Search series details by id
+     *
+     * @param {String} query
+     * @returns {Promise}
+     * @memberof API
+     */
+    search = query => {
+        return this.makeRequest('GET', `search/multi`, { query });
+    };
 }
 
 export default new API();

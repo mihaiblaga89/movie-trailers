@@ -13,7 +13,10 @@ class Carousel extends Component {
 
     componentDidMount() {
         const { getDataFunction } = this.props;
-        getDataFunction && getDataFunction().then(({ data }) => this.setState({ data }));
+        getDataFunction &&
+            getDataFunction()
+                .then(({ data }) => this.setState({ data }))
+                .catch(() => this.setState({ data: null }));
     }
 
     renderCarousel = () => {

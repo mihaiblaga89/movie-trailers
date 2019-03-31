@@ -2,11 +2,14 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { Container, Grid, Header, Button, Image, Divider } from 'semantic-ui-react';
+import swal from 'sweetalert';
 
 import API from '../../../services/api';
 import { generateBigPosterURL } from '../../../utils';
 import DetailsList from '../../generic/DetailsList';
 import DetailsPlaceholder from '../../generic/DetailsPlaceholder';
+
+/* global window */
 
 class Details extends Component {
     constructor(props) {
@@ -23,7 +26,17 @@ class Details extends Component {
     componentDidMount() {
         const { id, isMovie } = this;
         const getData = isMovie ? API.getMovie : API.getSeries;
-        getData(id).then(({ data }) => this.setState({ data }));
+        getData(id)
+            .then(({ data }) => this.setState({ data }))
+            .catch(err => {
+                if (err.response && err.response.status === 404) {
+                    swal('Oops!', 'Show/movie not found', 'error').then(() => {
+                        if (window) {
+                            window.history.back();
+                        }
+                    });
+                }
+            });
     }
 
     renderData = () => {
