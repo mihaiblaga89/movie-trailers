@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import CarouselComponent from '@brainhubeu/react-carousel';
 import { Container, Card, Image, Placeholder, Header } from 'semantic-ui-react';
 import { navigate } from '@reach/router';
+import swal from 'sweetalert';
 import '@brainhubeu/react-carousel/lib/style.css';
 
 import { generateSmallPosterURL } from '../../../utils';
@@ -16,7 +17,10 @@ class Carousel extends Component {
         getDataFunction &&
             getDataFunction()
                 .then(({ data }) => this.setState({ data }))
-                .catch(() => this.setState({ data: null }));
+                .catch(() => {
+                    this.setState({ data: null });
+                    swal('Oops', 'We encountered an error while getting data from TMDB', 'error');
+                });
     }
 
     renderCarousel = () => {

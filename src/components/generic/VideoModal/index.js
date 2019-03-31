@@ -29,7 +29,6 @@ class VideoModal extends Component {
 
     onError = err => {
         swal('Oops!', `We encountered an error. Code ${err.code}`, 'error');
-        console.log(JSON.stringify(err));
     };
 
     initPlayer = () => {
@@ -38,12 +37,7 @@ class VideoModal extends Component {
             player.configure('manifest.defaultPresentationDelay', 0);
             player.addEventListener('error', this.onError);
 
-            player
-                .load(this.playlistURL)
-                .then(() => {
-                    console.log('The video has now been loaded!');
-                })
-                .catch(this.onError);
+            player.load(this.playlistURL).catch(this.onError);
         }
     };
 
