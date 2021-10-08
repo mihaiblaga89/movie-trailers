@@ -1,34 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Carousel renders without crashing and matches snapshot 1`] = `
-<div
-  className="ui container"
-  style={
-    Object {
-      "marginTop": "20px",
-    }
-  }
->
-  <h2
-    className="ui header"
-  >
-    test
-  </h2>
-  <div
-    className="ui fluid placeholder"
-    style={
-      Object {
-        "height": "200px",
-      }
-    }
-  >
-    <div
-      className="rectangular image"
-    />
-  </div>
-</div>
-`;
-
 exports[`DetailsLabel renders without crashing and matches snapshot 1`] = `
 <div
   className="item"
@@ -332,19 +303,5 @@ exports[`SearchField renders without crashing and matches snapshot 1`] = `
       </div>
     </div>
   </div>
-</div>
-`;
-
-exports[`VideoModal renders without crashing and matches snapshot 1`] = `
-<div
-  className="video-modal-content content"
->
-  <video
-    autoPlay={true}
-    controls={true}
-    id="video"
-    poster="http://www.millson.net/wp-content/uploads/2013/09/IMAX_Slide3.jpg"
-    width="100%"
-  />
 </div>
 `;
