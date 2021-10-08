@@ -12,7 +12,7 @@ const tests = [
     { name: 'thumbnail', function: generateThumbnailPosterURL, argument: 'test', expect: 'http://image.tmdb.org/t/p/w92/test' },
 ];
 
-tests.forEach(test =>
+tests.forEach((test) =>
     it(`generates correct ${test.name} URL`, () => {
         const returned = test.function(test.argument);
         expect(returned).toBe(test.expect);

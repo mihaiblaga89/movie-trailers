@@ -10,22 +10,24 @@ import API from '../../../services/api';
 import { generateSmallPosterURL } from '../../../utils';
 
 class SearchField extends Component {
-    state = {
-        isLoading: false,
-        results: [],
-    };
+    constructor() {
+        super();
+        this.state = {
+            isLoading: false,
+            results: [],
+        };
+    }
 
-    computeResults = results => {
-        return results
-            .filter(result => result.media_type !== 'person') // take out persons since we don't support them
-            .map(result => ({
+    computeResults = (results) =>
+        results
+            .filter((result) => result.media_type !== 'person') // take out persons since we don't support them
+            .map((result) => ({
                 key: result.id,
                 title: result.title || result.name,
                 image: result.poster_path ? generateSmallPosterURL(result.poster_path) : null,
                 description: result.vote_average ? `${result.vote_average} / 10` : null,
                 type: result.media_type,
             }));
-    };
 
     reset = () => this.setState({ isLoading: false, results: [] });
 

@@ -27,7 +27,7 @@ class VideoModal extends Component {
         }
     }
 
-    onError = err => {
+    onError = (err) => {
         swal('Oops!', `We encountered an error. Code ${err.code}`, 'error');
     };
 
@@ -43,7 +43,7 @@ class VideoModal extends Component {
 
     render() {
         return (
-            <Fragment>
+            <>
                 <Modal.Content className="video-modal-content">
                     <video
                         ref={this.videoPlayer}
@@ -54,7 +54,7 @@ class VideoModal extends Component {
                         autoPlay
                     />
                 </Modal.Content>
-            </Fragment>
+            </>
         );
     }
 }

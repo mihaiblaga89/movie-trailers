@@ -41,11 +41,10 @@ class Carousel extends Component {
         if (data && Array.isArray(data.results)) {
             return (
                 <CarouselComponent slidesPerPage={isMobile ? 3 : 8} infinite arrows>
-                    {data.results.map(result => {
-                        const goTo = () => {
+                    {data.results.map((result) => {
+                        const goTo = () =>
                             // movies have title, series have name, decide where to go based on that
-                            return navigate(`/${result.title ? 'movies' : 'series'}/${result.id}`);
-                        };
+                            navigate(`/${result.title ? 'movies' : 'series'}/${result.id}`);
                         return (
                             <Card onClick={goTo} key={result.id}>
                                 <Image src={generateSmallPosterURL(result.poster_path)} />

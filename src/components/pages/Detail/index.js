@@ -29,7 +29,7 @@ class Details extends Component {
         const getData = isMovie ? API.getMovie : API.getSeries;
         getData(id)
             .then(({ data }) => this.setState({ data }))
-            .catch(err => {
+            .catch((err) => {
                 if (err.response && err.response.status === 404) {
                     swal('Oops!', 'Show/movie not found', 'error').then(() => {
                         if (window) {

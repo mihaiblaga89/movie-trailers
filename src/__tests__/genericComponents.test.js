@@ -22,7 +22,7 @@ const tests = [
     { name: 'VideoModal', component: <VideoModal /> },
 ];
 
-tests.forEach(test =>
+tests.forEach((test) =>
     it(`${test.name} renders without crashing and matches snapshot`, () => {
         const div = document.createElement('div');
         ReactDOM.render(test.component, div);

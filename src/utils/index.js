@@ -6,7 +6,7 @@ import config from '../config';
  * @param {String} path
  * @returns {String}
  */
-const generateSmallPosterURL = path => {
+const generateSmallPosterURL = (path) => {
     const baseURL = config.imageBaseURL;
     const imageSize = 'w185_and_h278_bestv2'; // best option for image uniformity
     return `${baseURL}${imageSize}/${path}`;
@@ -18,7 +18,7 @@ const generateSmallPosterURL = path => {
  * @param {String} path
  * @returns {String}
  */
-const generateBigPosterURL = path => {
+const generateBigPosterURL = (path) => {
     const baseURL = config.imageBaseURL;
     const imageSize = 'w500';
     return `${baseURL}${imageSize}/${path}`;
@@ -30,7 +30,7 @@ const generateBigPosterURL = path => {
  * @param {String} path
  * @returns {String}
  */
-const generateThumbnailPosterURL = path => {
+const generateThumbnailPosterURL = (path) => {
     const baseURL = config.imageBaseURL;
     const imageSize = 'w92';
     return `${baseURL}${imageSize}/${path}`;

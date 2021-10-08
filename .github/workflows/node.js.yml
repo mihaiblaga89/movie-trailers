@@ -26,8 +26,7 @@ jobs:
           node-version: ${{ matrix.node-version }}
           cache: "npm"
       - run: yarn
-      - run: yarn build
-      - run: yarn test
+      - run: yarn test --coverage
       - uses: sonarsource/sonarqube-scan-action@master
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}

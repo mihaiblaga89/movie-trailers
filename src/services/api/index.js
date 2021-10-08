@@ -49,9 +49,7 @@ class API {
      * @returns {Promise}
      * @memberof API
      */
-    getMostPopularMovies = params => {
-        return this.makeRequest('GET', 'movie/popular', params);
-    };
+    getMostPopularMovies = (params) => this.makeRequest('GET', 'movie/popular', params);
 
     /**
      * Get the most popular series
@@ -60,9 +58,7 @@ class API {
      * @returns {Promise}
      * @memberof API
      */
-    getMostPopularSeries = params => {
-        return this.makeRequest('GET', 'tv/popular', params);
-    };
+    getMostPopularSeries = (params) => this.makeRequest('GET', 'tv/popular', params);
 
     /**
      * Discover family genre (id 10751)
@@ -71,9 +67,7 @@ class API {
      * @returns {Promise}
      * @memberof API
      */
-    getFamilyGenre = (params = {}) => {
-        return this.makeRequest('GET', 'discover/movie', { with_genres: '10751', ...params });
-    };
+    getFamilyGenre = (params = {}) => this.makeRequest('GET', 'discover/movie', { with_genres: '10751', ...params });
 
     /**
      * Discover documentary genre (id 99)
@@ -82,9 +76,7 @@ class API {
      * @returns {Promise}
      * @memberof API
      */
-    getDocumentaryGenre = (params = {}) => {
-        return this.makeRequest('GET', 'discover/movie', { with_genres: '99', ...params });
-    };
+    getDocumentaryGenre = (params = {}) => this.makeRequest('GET', 'discover/movie', { with_genres: '99', ...params });
 
     /**
      * Get movie details by id
@@ -93,9 +85,7 @@ class API {
      * @returns {Promise}
      * @memberof API
      */
-    getMovie = id => {
-        return this.makeRequest('GET', `movie/${id}`);
-    };
+    getMovie = (id) => this.makeRequest('GET', `movie/${id}`);
 
     /**
      * Get series details by id
@@ -104,9 +94,7 @@ class API {
      * @returns {Promise}
      * @memberof API
      */
-    getSeries = id => {
-        return this.makeRequest('GET', `tv/${id}`);
-    };
+    getSeries = (id) => this.makeRequest('GET', `tv/${id}`);
 
     /**
      * Search series details by id
@@ -115,9 +103,7 @@ class API {
      * @returns {Promise}
      * @memberof API
      */
-    search = query => {
-        return this.makeRequest('GET', `search/multi`, { query });
-    };
+    search = (query) => this.makeRequest('GET', `search/multi`, { query });
 }
 
 export default new API();

@@ -10,7 +10,6 @@ exports[`renders without crashing and matches snapshot 1`] = `
   }
 >
   <div
-    role="group"
     style={
       Object {
         "outline": "none",
